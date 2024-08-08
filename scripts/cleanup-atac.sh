@@ -9,6 +9,7 @@ DEST=${ROOT}/keep
 echo -e "mkdir -p ${DEST}" > ${ROOT}/launch-cleanup.sh
 echo -e "rsync -avL ${SOURCE}/ataqv ${DEST}" >> ${ROOT}/launch-cleanup.sh
 echo -e "rsync -avL ${SOURCE}/bigwig ${DEST}" >> ${ROOT}/launch-cleanup.sh
+echo -e "rsync -avL ${SOURCE}/counts ${DEST}" >> ${ROOT}/launch-cleanup.sh
 echo -e "rsync -avL ${SOURCE}/macs2 ${DEST}" >> ${ROOT}/launch-cleanup.sh
 echo -e "rsync -avL ${SOURCE}/multiqc ${DEST}" >> ${ROOT}/launch-cleanup.sh
 echo -e "rsync -avL ${SOURCE}/prune ${DEST}" >> ${ROOT}/launch-cleanup.sh
