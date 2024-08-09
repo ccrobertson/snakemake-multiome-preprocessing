@@ -17,10 +17,10 @@ snakemake all --jobname "{jobid}" \
 
 When the snATAC-nextflow pipeline has completed on all libraries, you can extract important output using the following. This will put primary results in a directory called "keep". Now you can delete the nextflow 'work' directory and free up a lot of disk space.
 ```
-#first create the cleanup script
-ROOT=/scratch/scjp_root/scjp0/ccrober/preprocessing/7799-VD/work/multiome-atac
-bash scripts/cleanup-atac.sh ${ROOT} 
+#first create the cleanup script -- creates a slurm script: work/multiome-atac/cleanup.slurm
+bash scripts/cleanup-atac.sh
 
 #now run it (inspect it first to make sure paths are correct)
-bash ${ROOT}/launch-cleanup.sh
+cd work/multiome-atac
+sbatch cleanup.slurm
 ```
