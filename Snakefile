@@ -1,4 +1,5 @@
-ROOT="/scratch/scjp_root/scjp0/ccrober/preprocessing/10863-VD"
+import os
+ROOT = os.getcwd()
 
 rule all:
     input: 
