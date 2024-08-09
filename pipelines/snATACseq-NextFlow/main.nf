@@ -222,7 +222,7 @@ process make_barcode_corrections {
     publishDir "${params.results}/corrected-barcodes"
     tag "${library}"
     cpus 3
-    memory '10 GB'
+    memory '20 GB'
     time '5h'
     container 'library://porchard/default/general:20220107'
 
