@@ -223,7 +223,7 @@ process make_barcode_corrections {
     tag "${library}"
     cpus 3
     memory '20 GB'
-    time '5h'
+    time '10h'
     container 'library://porchard/default/general:20220107'
 
     input:
@@ -248,7 +248,7 @@ process trim {
     container 'library://porchard/default/cta:20220113'
     memory '4 GB'
     cpus 1
-    time '5h'
+    time '10h'
 
     input:
     tuple val(library), val(readgroup), path(fastq_1), path(fastq_2), path(barcode)
