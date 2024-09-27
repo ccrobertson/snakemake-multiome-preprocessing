@@ -8,7 +8,7 @@ DEST=${ROOT}/keep
 echo -e "#!/bin/bash" > ${ROOT}/cleanup.slurm
 echo -e "#SBATCH --time=16:00:00" >> ${ROOT}/cleanup.slurm
 echo -e "#SBATCH --mem=1000M" >> ${ROOT}/cleanup.slurm
-echo -e "#SBATCH --account=scjp0" >> ${ROOT}/cleanup.slurm
+echo -e "#SBATCH --account=scjp1" >> ${ROOT}/cleanup.slurm
 echo -e "#SBATCH --output=%u-%x-%j.log" >> ${ROOT}/cleanup.slurm
 echo -e "#SBATCH --error=%u-%x-%j.err" >> ${ROOT}/cleanup.slurm
 echo -e "#SBATCH --mail-user=ccrober@umich.edu" >> ${ROOT}/cleanup.slurm
