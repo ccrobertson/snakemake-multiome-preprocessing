@@ -1,7 +1,20 @@
+## Description
 This pipeline performs 
 1. Automated detection of nuclei-containing droplets --> barcode_keeplist
 2. Joint qc plots to assess quality of droplets in barcode_keeplist
 
+As input this requires a config table with the following columns:
+- library
+- path_type
+- path
+
+Where the following path types are provided:
+- starsolo_dir
+- cellbender_h5
+- rna_metrics
+- atac_metrics
+- rna_whitelist
+- atac_whitelist
 
 ## Run the pipeline
 ```
