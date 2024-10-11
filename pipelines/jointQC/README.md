@@ -22,14 +22,15 @@ bash run.sh
 ```
 
 
-## For conciseness, will define models as
+## The pipeline currently runs these models:
 * Model 1 - RNA umis + RNA mitochondrial fraction
 * Model 2 - RNA umis + ATAC HQAA
 * Model 3 - RNA umis + ATAC TSS enrichment
 * Model 4 - RNA umis + RNA mitochondrial fraction + ATAC TSS enrichment
 * Model 5 - RNA umis + RNA exonic fraction
 
-## Compile the images for sharing
+
+## After running, you can compile the images into pds for each model with the following commands:
 ```
 module load Bioinformatics  gcc/10.3.0-k2osx5y
 module load imagemagick/7.1.0-33-xlaibek
