@@ -24,3 +24,6 @@ echo -e "rsync -avL ${SOURCE}/multiqc ${DEST}" >> ${ROOT}/cleanup.slurm
 echo -e "rsync -avL ${SOURCE}/prune ${DEST}" >> ${ROOT}/cleanup.slurm
 echo -e "rsync -avL ${SOURCE}/plot-barcodes-matching-whitelist ${DEST}" >> ${ROOT}/cleanup.slurm
 echo -e "rsync -avL ${SOURCE}/fragment-file ${DEST}" >> ${ROOT}/cleanup.slurm
+
+echo -e "mv ${SOURCE} ${SOURCE}_orig" >> ${ROOT}/cleanup.slurm
+echo -e "mv ${DEST} ${SOURCE}" >> ${ROOT}/cleanup.slurm
