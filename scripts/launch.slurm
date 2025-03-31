@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --time=168:00:00
 #SBATCH --mem=10000M
-#SBATCH --account=scjp0
+#SBATCH --account=scjp1
 #SBATCH --output=%u-%x-%j.log
 #SBATCH --error=%u-%x-%j.err
 #SBATCH --mail-user=ccrober@umich.edu

@@ -177,7 +177,7 @@ process transform_barcode {
     publishDir "${params.results}/transformed-barcodes"
     tag "${library}-${readgroup}"
     cpus 1
-    time '5h'
+    time '10h'
     memory '10 GB'
     container 'library://porchard/default/general:20220107'
 
@@ -223,7 +223,7 @@ process make_barcode_corrections {
     tag "${library}"
     cpus 3
     memory '20 GB'
-    time '10h'
+    time '5h'
     container 'library://porchard/default/general:20220107'
 
     input:
@@ -248,7 +248,7 @@ process trim {
     container 'library://porchard/default/cta:20220113'
     memory '4 GB'
     cpus 1
-    time '10h'
+    time '30h'
 
     input:
     tuple val(library), val(readgroup), path(fastq_1), path(fastq_2), path(barcode)
@@ -316,7 +316,7 @@ process bwa {
     cpus 12
     errorStrategy 'retry'
     maxRetries 1
-    time '48h'
+    time '300h'
     tag "${library}-${readgroup}-${genome}"
     container 'library://porchard/default/bwa:0.7.15'
 
@@ -784,7 +784,7 @@ process ataqv_bulk_viewer {
 process get_peak_counts {
 
     publishDir "${params.results}/counts"
-    memory '75 GB'
+    memory '200 GB'
     time '48h'
     tag "${library} ${genome}"
     container 'library://porchard/default/general:20220107'
