@@ -8,7 +8,8 @@ import re
 FASTQ_FILES = sys.argv[1:]
 
 def parse_fastq_name(f):
-    RE = '^(.*-VD-\d+)-ATAC_(S\d+)_([IR]\d+)_001.fastq.gz'
+    #RE = '^(.*-VD-\d+)-ATAC_(S\d+)_([IR]\d+)_001.fastq.gz'
+    RE = '^(.*)-ATAC_(S\d+)_([IR]\d+)_001.fastq.gz'
     if not re.match(RE, os.path.basename(f)):
         raise ValueError(f'Could not parse filename {f}')
     library, readgroup, read = re.match(RE, os.path.basename(f)).groups()
