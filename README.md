@@ -27,3 +27,8 @@ sbatch cleanup.slurm > cleanup.submitted
 cd work/multiome-rna
 sbatch cleanup.slurm > cleanup.submitted
 ```
+
+
+A note about version control. If you clone this repository to your workspace, the snRNAseq-nextflow and snATACseq-nextflow pipelines will not be remotely connected to the source github repositories. Below are the versions of the repositories that are currently included. For more updated versions or to keep track of changes in these repositories, replace them with clones directly from the source repositories.
+* snRNAseq-nextflow (https://github.com/porchard/snRNAseq-NextFlow) - commit c4938e9f4a4db512cce707d586f53be610469b7c from Feb 10, 2025
+* snATACseq-nextflow (https://github.com/porchard/snATACseq-NextFlow) - commit 18cf76233596a76c5cd16e3c14ae944a0ab0b736 from May 20, 2024
