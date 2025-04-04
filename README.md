@@ -28,6 +28,16 @@ cd work/multiome-rna
 sbatch cleanup.slurm > cleanup.submitted
 ```
 
+#now that you've pulled important output out of the work directory into the results directory you can delete the contents of the work dir
+#to delete intermediate results files but preserve nextflow execution information (.command.log, .command.sh, etc.), you can use the following
+```
+cd work/multiome-atac/work
+find . -not -path '*/\.*' -delete
+
+cd work/multiome-rna/work
+find . -not -path '*/.*' -delete
+```
+
 
 A note about version control. If you clone this repository to your workspace, the snRNAseq-nextflow and snATACseq-nextflow pipelines will not be remotely connected to the source github repositories. Below are the versions of the repositories that are currently included. For more updated versions or to keep track of changes in these repositories, replace them with clones directly from the source repositories.
 * snRNAseq-nextflow (https://github.com/porchard/snRNAseq-NextFlow) - commit c4938e9f4a4db512cce707d586f53be610469b7c from Feb 10, 2025
